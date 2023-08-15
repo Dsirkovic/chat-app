@@ -25,7 +25,7 @@ class Input extends Component {
             value={this.state.text}
             type="text"
             placeholder=" Za slanje pritisni ENTER ili šalji..."
-            autofocus="true"
+            autoFocus={true}
           />
           <button>Šalji</button>
         </form>
