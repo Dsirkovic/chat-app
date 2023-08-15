@@ -12,13 +12,14 @@ class Messages extends Component {
   }
 
   renderMessage(message) {
-    const {member, text} = message;
-    const {currentMember} = this.props;
+    const { member, text } = message;
+    const { currentMember } = this.props;
     const messageFromMe = member.id === currentMember.id;
-    const className = messageFromMe ?
-      "Messages-message currentMember" : "Messages-message";
+    const className = messageFromMe
+      ? "Messages-message currentMember"
+      : "Messages-message";
     return (
-      <li className={className}>
+      <li key={message.id} className={className}>
       <span
         className="avatar"
         style={{backgroundColor: member.clientData.color}}
